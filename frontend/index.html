@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Preparation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page theme-blue">
+  <nav class="top-nav">
+    <span class="nav-btn chapters current" aria-current="page">Chapters</span>
+    <a href="read.html" class="nav-btn read">Read</a>
+    <a href="completed.html" class="nav-btn completed">Completed</a>
+  </nav>
+  <main class="container">
+    <h1 class="title">NEET Preparation</h1>
+    <p class="subtitle">Pick a chapter you have studied and submit it to Read.</p>
+    <div id="chapter-list" class="chapter-list"></div>
+    <p id="empty" class="empty" hidden>All chapters are in Read or Completed.</p>
+  </main>
+  <button id="submit-btn" class="submit-btn" type="button" disabled>Submit</button>
+  <script src="js/decor.js"></script>
+  <script src="js/chapters.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

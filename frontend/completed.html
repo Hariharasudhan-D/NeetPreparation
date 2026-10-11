@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completed Chapters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page theme-green">
+  <nav class="top-nav">
+    <a href="index.html" class="nav-btn chapters">Chapters</a>
+    <a href="read.html" class="nav-btn read">Read</a>
+    <span class="nav-btn completed current" aria-current="page">Completed</span>
+  </nav>
+  <main class="container">
+    <div class="progress" aria-label="Completion progress">
+      <div class="progress-label">
+        <span>Progress</span>
+        <span id="progress-text">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+    <h1 class="title">Completed Chapters</h1>
+    <p class="subtitle">Every chapter here is done. Great work! Double-click a chapter to select it.</p>
+    <p id="congrats" class="congrats" hidden></p>
+    <div id="chapter-list" class="chapter-list"></div>
+    <p id="empty" class="empty" hidden>No chapters completed yet. Keep going!</p>
+  </main>
+  <button id="remove-btn" class="remove-btn" type="button" disabled>Remove</button>
+  <script src="js/decor.js"></script>
+  <script src="js/chapters.js"></script>
+  <script src="js/completed.js"></script>
+</body>
+</html>

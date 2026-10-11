@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Chapters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page theme-red">
+  <nav class="top-nav">
+    <a href="index.html" class="nav-btn chapters">Chapters</a>
+    <span class="nav-btn read current" aria-current="page">Read</span>
+    <a href="completed.html" class="nav-btn completed">Completed</a>
+  </nav>
+  <main class="container">
+    <h1 class="title">Read Chapters</h1>
+    <p class="subtitle">Revise these chapters, then do test and submit.</p>
+    <div id="chapter-list" class="chapter-list"></div>
+    <p id="empty" class="empty" hidden>No chapters to show here.</p>
+  </main>
+  <button id="submit-btn" class="submit-btn" type="button" disabled>Submit</button>
+  <button id="remove-btn" class="remove-btn" type="button" disabled>Remove</button>
+  <script src="js/decor.js"></script>
+  <script src="js/chapters.js"></script>
+  <script src="js/read.js"></script>
+</body>
+</html>
