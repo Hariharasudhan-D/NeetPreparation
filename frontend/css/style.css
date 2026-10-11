@@ -5,20 +5,28 @@
 }
 
 :root {
+  --blue-light: #38bdf8;
   --blue: #2563eb;
-  --blue-dark: #1e40af;
-  --red: #e11d48;
-  --red-dark: #9f1239;
+  --blue-dark: #312e81;
+  --pink-light: #f9a8d4;
+  --pink: #ec4899;
+  --pink-dark: #9d174d;
+  --green-light: #6ee7b7;
   --green: #16a34a;
-  --green-dark: #166534;
+  --green-dark: #14532d;
   --text: #1e293b;
   --muted: #64748b;
 }
 
 /* Each page picks its colour */
-.theme-blue  { --accent: var(--blue);  --accent-dark: var(--blue-dark);  --tint: #dbeafe; }
-.theme-red   { --accent: var(--red);   --accent-dark: var(--red-dark);   --tint: #ffe4e6; }
-.theme-green { --accent: var(--green); --accent-dark: var(--green-dark); --tint: #dcfce7; }
+.theme-blue  { --accent-light: var(--blue-light);  --accent: var(--blue);  --accent-dark: var(--blue-dark);  --tint: #dbeafe; }
+.theme-pink  { --accent-light: var(--pink-light);  --accent: var(--pink);  --accent-dark: var(--pink-dark);  --tint: #fce7f3; }
+.theme-green { --accent-light: var(--green-light); --accent: var(--green); --accent-dark: var(--green-dark); --tint: #dcfce7; }
+
+/* Three-tone colour grade used by boxes, titles and buttons */
+.page {
+  --grade: linear-gradient(120deg, var(--accent-light) 0%, var(--accent) 45%, var(--accent-dark) 100%);
+}
 
 html {
   min-height: 100%;
@@ -46,7 +54,7 @@ body.page {
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.6rem, 7vw, 4.2rem);
   text-align: center;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: var(--grade);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -74,7 +82,7 @@ body.page {
   min-height: 74px;
   padding: 16px 32px 16px 18px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: var(--grade);
   color: #ffffff;
   font-size: 1.15rem;
   font-weight: 500;
@@ -191,9 +199,9 @@ body.page {
   filter: brightness(1.08);
 }
 
-.nav-btn.chapters  { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); }
-.nav-btn.read      { background: linear-gradient(135deg, var(--red), var(--red-dark)); }
-.nav-btn.completed { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+.nav-btn.chapters  { background: linear-gradient(120deg, var(--blue-light), var(--blue) 45%, var(--blue-dark)); }
+.nav-btn.read      { background: linear-gradient(120deg, var(--pink-light), var(--pink) 45%, var(--pink-dark)); }
+.nav-btn.completed { background: linear-gradient(120deg, var(--green-light), var(--green) 45%, var(--green-dark)); }
 
 /* Bottom corner action buttons */
 .submit-btn,
@@ -208,7 +216,7 @@ body.page {
 
 .submit-btn {
   left: 24px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: var(--grade);
 }
 
 .remove-btn {
@@ -331,6 +339,6 @@ body.page {
   width: 0;
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--green), #4ade80);
+  background: linear-gradient(90deg, var(--green-dark), var(--green), var(--green-light));
   transition: width 0.6s ease;
 }
