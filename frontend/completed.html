@@ -16,15 +16,18 @@
     <span class="nav-btn completed current" aria-current="page">Completed</span>
   </nav>
   <main class="container">
-    <div class="progress" aria-label="Completion progress">
-      <div class="progress-label">
-        <span>Progress</span>
-        <span id="progress-text">0%</span>
+    <section class="progress-card" aria-label="Completion progress">
+      <div class="progress-head">
+        <span class="progress-title">Progress</span>
+        <span><strong id="progress-count">0</strong>/39 · <span id="progress-percent">0%</span></span>
       </div>
-      <div class="progress-track">
-        <div id="progress-fill" class="progress-fill"></div>
+      <div id="progress-grid" class="progress-grid"></div>
+      <div class="progress-legend">
+        <span><i class="cell completed"></i>Completed</span>
+        <span><i class="cell read"></i>Read</span>
+        <span><i class="cell"></i>Not started</span>
       </div>
-    </div>
+    </section>
     <h1 class="title">Completed Chapters</h1>
     <p class="subtitle">Every chapter here is done. Great work! Double-click a chapter to select it.</p>
     <p id="congrats" class="congrats" hidden></p>
