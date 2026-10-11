@@ -44,7 +44,7 @@ const CHAPTERS = [
 // Local backend while developing; replace the Render URL after deploying.
 const API_BASE_URL = ["localhost", "127.0.0.1", ""].includes(location.hostname)
   ? "http://localhost:8080/api"
-  : "https://YOUR-RENDER-APP.onrender.com/api";
+  : "https://neetpreparation.onrender.com/api";
 
 // Returns { read: [ids], completed: [ids] } from the backend.
 async function fetchProgress() {
