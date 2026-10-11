@@ -39,3 +39,15 @@ if (subtitle) {
   daily.textContent = `⚕ ${QUOTES[Math.floor(Math.random() * QUOTES.length)]}`;
   subtitle.after(daily);
 }
+
+// Personal motivation banner at the top of every page.
+const container = document.querySelector(".container");
+if (container) {
+  const banner = document.createElement("div");
+  banner.className = "dr-banner";
+  banner.innerHTML = `
+    <span class="dr-name"><span class="dr-symbol" aria-hidden="true">⚕</span> Dr Ruxcindhaa</span>
+    <span class="dr-loading">Loading<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></span>
+  `;
+  container.prepend(banner);
+}
