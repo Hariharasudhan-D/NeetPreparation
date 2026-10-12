@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/progress")
 public class ProgressController {
 
-	private static final int CHAPTER_COUNT = 39;
+	private static final int CHAPTER_COUNT = 41;
 
 	private final ChapterProgressRepository repository;
 

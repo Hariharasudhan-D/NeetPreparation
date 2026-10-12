@@ -1,5 +1,7 @@
 // Temporary local data; will come from the backend (Supabase) later.
 const CHAPTERS = [
+  "IUPAC",
+  "Isomerism",
   "Living world",
   "Biological classification",
   "Plant kingdom",
