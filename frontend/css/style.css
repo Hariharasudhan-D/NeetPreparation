@@ -11,6 +11,9 @@
   --pink-light: #f9a8d4;
   --pink: #ec4899;
   --pink-dark: #9d174d;
+  --amber-light: #fcd34d;
+  --amber: #f59e0b;
+  --amber-dark: #b45309;
   --green-light: #6ee7b7;
   --green: #16a34a;
   --green-dark: #14532d;
@@ -21,6 +24,7 @@
 /* Each page picks its colour */
 .theme-blue  { --accent-light: var(--blue-light);  --accent: var(--blue);  --accent-dark: var(--blue-dark);  --tint: #dbeafe; }
 .theme-pink  { --accent-light: var(--pink-light);  --accent: var(--pink);  --accent-dark: var(--pink-dark);  --tint: #fce7f3; }
+.theme-amber { --accent-light: var(--amber-light); --accent: var(--amber); --accent-dark: var(--amber-dark); --tint: #fef3c7; }
 .theme-green { --accent-light: var(--green-light); --accent: var(--green); --accent-dark: var(--green-dark); --tint: #dcfce7; }
 
 /* Three-tone colour grade used by boxes, titles and buttons */
@@ -200,6 +204,7 @@ body.page {
 }
 
 .nav-btn.chapters  { background: linear-gradient(120deg, var(--blue-light), var(--blue) 45%, var(--blue-dark)); }
+.nav-btn.lecture   { background: linear-gradient(120deg, var(--amber-light), var(--amber) 45%, var(--amber-dark)); }
 .nav-btn.read      { background: linear-gradient(120deg, var(--pink-light), var(--pink) 45%, var(--pink-dark)); }
 .nav-btn.completed { background: linear-gradient(120deg, var(--green-light), var(--green) 45%, var(--green-dark)); }
 
@@ -358,6 +363,10 @@ body.page {
 
 .progress-grid .cell:hover {
   transform: scale(1.2);
+}
+
+.cell.lecture {
+  background: var(--amber-light);
 }
 
 .cell.read {

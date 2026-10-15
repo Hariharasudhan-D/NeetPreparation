@@ -7,13 +7,13 @@ const empty = document.getElementById("empty");
 
   empty.hidden = progress.read.length > 0;
 
-  // Submit moves the chapter to Completed; Remove sends it back to Chapters.
+  // Submit moves the chapter to Completed; Remove sends it back to Lecture.
   const move = (status) => (id) => {
     moveChapter(id, status);
     empty.hidden = list.children.length > 1;
   };
   renderSelectableList(list, progress.read, [
     { button: document.getElementById("submit-btn"), onClick: move("COMPLETED") },
-    { button: document.getElementById("remove-btn"), onClick: move("NONE") },
+    { button: document.getElementById("remove-btn"), onClick: move("LECTURE") },
   ]);
 })();

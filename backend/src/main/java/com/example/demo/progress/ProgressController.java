@@ -28,11 +28,12 @@ public class ProgressController {
 	@GetMapping
 	public Map<String, List<Integer>> getProgress() {
 		return Map.of(
+				"lecture", idsWithStatus(ChapterStatus.LECTURE),
 				"read", idsWithStatus(ChapterStatus.READ),
 				"completed", idsWithStatus(ChapterStatus.COMPLETED));
 	}
 
-	/** Moves a chapter to READ or COMPLETED; status NONE sends it back to Chapters. */
+	/** Moves a chapter to LECTURE, READ or COMPLETED; status NONE sends it back to Chapters. */
 	@PutMapping("/{chapterId}")
 	public ResponseEntity<Void> setStatus(@PathVariable int chapterId, @RequestBody Map<String, String> body) {
 		if (chapterId < 1 || chapterId > CHAPTER_COUNT) {

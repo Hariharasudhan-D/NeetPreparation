@@ -32,6 +32,7 @@ function updateMessage(count) {
   const progress = await loadProgress(list);
   if (!progress) return;
 
+  progress.lecture.forEach((id) => setCell(id, "lecture"));
   progress.read.forEach((id) => setCell(id, "read"));
   progress.completed.forEach((id) => setCell(id, "completed"));
   updateMessage(progress.completed.length);
